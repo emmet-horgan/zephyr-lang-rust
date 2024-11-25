@@ -34,6 +34,8 @@ extern int errno;
 #include <zephyr/kernel/thread_stack.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
+#include <zephyr/net/socket.h>
+#include <zephyr/net/net_pkt.h>
 
 /*
  * bindgen will output #defined constant that resolve to simple numbers.  There are some symbols
