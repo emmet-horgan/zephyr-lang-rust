@@ -72,10 +72,22 @@ fn main() -> Result<()> {
         .allowlist_function("gpio_.*")
         .allowlist_function("sys_.*")
         .allowlist_function("z_log.*")
+
+        .allowlist_function("zsock_.*")
+        .allowlist_function("http_.*")
+        .allowlist_function("mqtt_.*")
+    
         .allowlist_item("E.*")
         .allowlist_item("K_.*")
         .allowlist_item("ZR_.*")
         .allowlist_item("LOG_LEVEL_.*")
+
+        .allowlist_item("AF_.*")
+        .allowlist_item("net_sock_.*")
+        .allowlist_item("net_ip_.*")
+        .allowlist_item("SOL_.*")
+        .allowlist_item("SO_.*")
+        .allowlist_item("sockaddr_.*")
         // Deprecated
         .blocklist_function("sys_clock_timeout_end_calc")
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
